@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Popcorn</title>
+	</head>
+	<body>
+		<h1>Club Popcorn Sales</h1>
+		<form action="mailto:jabouch98@my.uri.edu" method="POST" enctype="multipart/form-data" name="Popcorn">
+			<fieldset class="personal">
+				<label for="buyer">
+					Buyer's Name:
+					<input type="text" name="buyer" id="buyer" required>
+				</labe>
+				<label for="street">
+					Street Address:
+					<input type="text" name="street" id="street">
+				</label>
+				<label for="address">
+					City, State, Zip:
+					<input type="text" name="address" id="address">
+				</label>
+			</fieldset>
+			<fieldset class="order">
+				<table>
+					<tr>
+						<th>Product Name</th>
+						<th>Price</th>
+						<th>Quantity</th>
+					</tr>
+					<tr>
+						<td>Unpopped Popcorn (1 lb.)</td>
+						<td>$3.00</td>
+						<td> <input type="number" name="unpopped" id="unpopped"> </td>
+					</tr>
+					<tr>
+						<td>Caramel Popcorn (2 lb. cannister)</td>
+						<td>$3.50</td>
+						<td> <input type="number" name="caramel" id="caramel"> </td>
+					</tr>
+					<tr>
+						<td>Caramel Nut Popcorn (2 lb. cannister)</td>
+						<td>$4.50</td>
+						<td> <input type="number" name="carNut" id="carNut"> </td>
+					</tr>
+					<tr>
+						<td>Toffey Nut Popcorn (2 lb. cannister)</td>
+						<td>$5.00</td>
+						<td> <input type="number" name="toffey" id="toffey"> </td>
+					</tr>
+					<tr>
+						<td><b>Subtotal</b></td>
+						<td></td>
+						<td> <button type="button"> Update Subtotal </button> </td>
+					</tr>
+				</table>
+			</fieldset>
+			<h2>Payment Method</h2>
+			<p>
+				<b>Grand Total:</b>
+			</P>
+			<input type="radio" name="visa" id="visa">Visa
+			<input type="radio" name="master" id="master">MasterCard
+			<input type="radio" name="discover" id="discover">Discover
+			<input type="radio" name="american" id="american">American Express
+			<input type="radio" name="check" id="check">Check
+			<button type="button" id="submit">
+				Submit Order
+			</button>
+			<button type="button" id="clear">
+				Clear Form
+			</button>
+		</form>
+	</body>
+</html>
