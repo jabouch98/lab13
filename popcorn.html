@@ -30,27 +30,27 @@
 					<tr>
 						<td>Unpopped Popcorn (1 lb.)</td>
 						<td>$3.00</td>
-						<td> <input type="number" name="unpopped" id="unpopped"> </td>
+						<td> <input type="number" name="unpopped" id="unpopped" min="0" max="20"> </td>
 					</tr>
 					<tr>
 						<td>Caramel Popcorn (2 lb. cannister)</td>
 						<td>$3.50</td>
-						<td> <input type="number" name="caramel" id="caramel"> </td>
+						<td> <input type="number" name="caramel" id="caramel" min="0" max="20"> </td>
 					</tr>
 					<tr>
 						<td>Caramel Nut Popcorn (2 lb. cannister)</td>
 						<td>$4.50</td>
-						<td> <input type="number" name="carNut" id="carNut"> </td>
+						<td> <input type="number" name="carNut" id="carNut" min="0" max="20"> </td>
 					</tr>
 					<tr>
 						<td>Toffey Nut Popcorn (2 lb. cannister)</td>
 						<td>$5.00</td>
-						<td> <input type="number" name="toffey" id="toffey"> </td>
+						<td> <input type="number" name="toffey" id="toffey" min="0" max="20"> </td>
 					</tr>
 					<tr>
 						<td><b>Subtotal</b></td>
-						<td></td>
-						<td> <button type="button"> Update Subtotal </button> </td>
+						<td id="output">0</td>
+						<td> <button type="button" onclick="calcSub()"> Update Subtotal </button> </td>
 					</tr>
 				</table>
 			</fieldset>
@@ -70,5 +70,7 @@
 				Clear Form
 			</button>
 		</form>
+		<script src="subtotal.js">
+		</script>
 	</body>
 </html>
