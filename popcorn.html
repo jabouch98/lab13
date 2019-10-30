@@ -5,12 +5,12 @@
 	</head>
 	<body>
 		<h1>Club Popcorn Sales</h1>
-		<form action="mailto:jabouch98@my.uri.edu" method="POST" enctype="multipart/form-data" name="Popcorn">
+		<form action="mailto:jpdwyer@my.uri.edu" method="POST" enctype="text/plain" id="form" onsubmit="return confirmation()">
 			<fieldset class="personal">
 				<label for="buyer">
 					Buyer's Name:
-					<input type="text" name="buyer" id="buyer" required>
-				</labe>
+					<input type="text" name="buyer" id="buyer" placeholder="Name Required" required>
+				</label>
 				<label for="street">
 					Street Address:
 					<input type="text" name="street" id="street">
@@ -30,45 +30,49 @@
 					<tr>
 						<td>Unpopped Popcorn (1 lb.)</td>
 						<td>$3.00</td>
-						<td> <input type="number" name="unpopped" id="unpopped"> </td>
+						<td> <input type="number" name="unpopped" id="unpopped" min="0" max="20"> </td>
 					</tr>
 					<tr>
 						<td>Caramel Popcorn (2 lb. cannister)</td>
 						<td>$3.50</td>
-						<td> <input type="number" name="caramel" id="caramel"> </td>
+						<td> <input type="number" name="caramel" id="caramel" min="0" max="20"> </td>
 					</tr>
 					<tr>
 						<td>Caramel Nut Popcorn (2 lb. cannister)</td>
 						<td>$4.50</td>
-						<td> <input type="number" name="carNut" id="carNut"> </td>
+						<td> <input type="number" name="carNut" id="carNut" min="0" max="20"> </td>
 					</tr>
 					<tr>
 						<td>Toffey Nut Popcorn (2 lb. cannister)</td>
 						<td>$5.00</td>
-						<td> <input type="number" name="toffey" id="toffey"> </td>
+						<td> <input type="number" name="toffey" id="toffey" min="0" max="20"> </td>
 					</tr>
 					<tr>
 						<td><b>Subtotal</b></td>
-						<td></td>
-						<td> <button type="button"> Update Subtotal </button> </td>
+						<td id="output">0</td>
+						<td> <button type="button" onclick="calcSub()"> Update Subtotal </button> </td>
 					</tr>
 				</table>
 			</fieldset>
 			<h2>Payment Method</h2>
-			<p>
-				<b>Grand Total:</b>
-			</P>
-			<input type="radio" name="visa" id="visa">Visa
-			<input type="radio" name="master" id="master">MasterCard
-			<input type="radio" name="discover" id="discover">Discover
-			<input type="radio" name="american" id="american">American Express
-			<input type="radio" name="check" id="check">Check
-			<button type="button" id="submit">
-				Submit Order
-			</button>
-			<button type="button" id="clear">
-				Clear Form
-			</button>
+			<table>
+			<tr>
+				<td><b>Grand Total:</b></td>
+				<td id="grand">0</td>
+				<td> <button type="button" onclick="calcGrand()"> Update Grand Total </button> </td>
+			</tr>
+			</table>
+			<input type="radio" name="yesno" id="visa">Visa
+			<input type="radio" name="yesno" id="master">MasterCard
+			<input type="radio" name="yesno" id="discover">Discover
+			<input type="radio" name="yesno" id="american">American Express
+			<input type="radio" name="yesno" id="check">Check
+			<br>
+			<br>
+			<input type="submit" value ="submit">
+			<input type="reset" value="reset" id="clear">
 		</form>
+		<script src="subtotal.js">
+		</script>
 	</body>
 </html>
